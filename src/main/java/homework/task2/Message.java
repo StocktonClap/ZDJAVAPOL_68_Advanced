@@ -9,4 +9,7 @@ abstract public class Message {
 
     abstract public String send();
 
+    public boolean canSend() {
+        return !content.isEmpty() && !content.isBlank() && content.length() >= 5;
+    }
 }
