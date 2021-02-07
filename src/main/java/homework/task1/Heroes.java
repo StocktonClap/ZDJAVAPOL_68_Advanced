@@ -13,7 +13,8 @@ public class Heroes extends Person{
 
     @Override
     public String toString() {
-        return "Bohater: " +name +" urodzony " +birthDate + "\n" +
+        return "Hero: " +name + "\n"+
+                "Born: " +birthDate + "\n" +
                 "Special ability: " +specialAbility;
     }
 }
