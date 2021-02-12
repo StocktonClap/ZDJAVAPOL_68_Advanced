@@ -1,43 +1,19 @@
 package homework.task3;
 
-public class SmartWatch {
-    final String producer;
-    final int batteryCapacity;
+public class SmartWatch extends ElectronicDevices {
     final String strapColor;
-    boolean isWiFi;
 
     public SmartWatch(String producer, int batteryCapacity, String strapColor) {
-        this.producer = producer;
-        this.batteryCapacity = batteryCapacity;
+        super(producer, batteryCapacity);
         this.strapColor = strapColor;
-    }
-
-    public int maxWorkTime(int consumptionPerHour){
-        return batteryCapacity/consumptionPerHour;
-    }
-
-    public String getProducer() {
-        return producer;
-    }
-
-    public int getBatteryCapacity() {
-        return batteryCapacity;
     }
 
     public String getStrapColor() {
         return strapColor;
     }
 
-    public boolean isWiFi() {
-        return isWiFi;
-    }
-
-    public void setWiFi(boolean wiFi) {
-        isWiFi = wiFi;
-    }
-
     public String sendSMS(String sms){
-        if (isWiFi){
+        if (isWifi){
             return "Your smartwatch is Sending " + sms;
         } else {
             return "Cant send. Turn on Wifi";

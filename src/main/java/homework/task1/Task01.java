@@ -12,7 +12,7 @@ import java.time.LocalDate;
  */
 public class Task01 {
     public static void main(String[] args) {
-        Person hero = new Heroes("Batman" , LocalDate.of(1980,10,10), "A lot of bats under his jacket! ^^"); //ZMIEN TYLKO PRAWĄ STRONE!!!
+        Person hero = new Hero("Batman" , LocalDate.of(1980,10,10), "A lot of bats under his jacket! ^^"); //ZMIEN TYLKO PRAWĄ STRONE!!!
         System.out.println(hero);
     }
 }

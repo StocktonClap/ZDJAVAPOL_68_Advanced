@@ -11,11 +11,11 @@ package homework.task3;
 public class Task03 {
     public static void main(String[] args) {
         /**
-         * Po wykonaniu zadania zmień typ referencji na zdefiniowaną klasę abstrakcyjną w poniższych trzeh wierszach
+         * Po wykonaniu zadania zmień typ referencji na zdefiniowaną klasę abstrakcyjną w poniższych trzech wierszach
          */
-        CellPhone superZi = new CellPhone(4000, "Szamsuk", "1678876", 12_000_000);
-        Laptop iDaisy = new Laptop(8000, "XYZ-100 RW", 120, "Daisy Co");
-        SmartWatch handyWatch = new SmartWatch("Quququ", 1000, "black");
+        ElectronicDevices superZi = new CellPhone(4000, "Szamsuk", "1678876", 12_000_000);
+        ElectronicDevices iDaisy = new Laptop(8000, "XYZ-100 RW", 120, "Daisy Co");
+        ElectronicDevices handyWatch = new SmartWatch("Quququ", 1000, "black");
         /**
          * Jeśli po zmianie program wyświetli dokładnie takie same komunikaty, to znaczy, że zadanie zostało wykonane poprawnie
          */
@@ -25,10 +25,11 @@ public class Task03 {
         System.out.println(superZi.sendSMS("Hello"));
         System.out.println(handyWatch.sendSMS("Hello"));
         System.out.println(iDaisy.sendSMS("Hello"));
-        handyWatch.setWiFi(true);
+        handyWatch.setWifi(true);
         System.out.println(handyWatch.sendSMS("Hello"));
-        superZi.setWiFi(true);
+        superZi.setWifi(true);
         superZi = new CellPhone(3000, "Czułałej", null, 16_000_000);
         System.out.println(superZi.sendSMS("Hello again"));
+        System.out.println(superZi.maxWorkTime(10));
     }
 }

@@ -1,6 +1,8 @@
 package homework.task2;
 
-public class SMS extends Message{
+import java.util.regex.Pattern;
+
+public class SMS extends Message {
 
     final String phoneNumber;
 
@@ -16,7 +18,17 @@ public class SMS extends Message{
 
     @Override
     public String send() {
-        return null;
+        if (canSend()) return "SMS o treści: " + getContent() + " został wysłany na numer: " + this.phoneNumber;
+            return "SMS nie może zostać wysłany";
+    }
+
+    @Override
+    public boolean canSend() {
+        if (phoneNumber == null) return false;
+        return super.canSend() && (Pattern.matches("\\d{3}\\s?\\d{3}\\s?\\d{3}\\s?", phoneNumber));
     }
 
 }
+
+
+

@@ -64,6 +64,12 @@ public class Task02 {
         for(Message m: messeges){
             System.out.println(m.send());
         }
+
+        Email e = new Email("Co słychać u Ciebie?", "deshyyy@gmail.pl", "Hello!");
+        System.out.println(e.isEmail());
+        System.out.println(e.isSubject());
+        System.out.println(e.canSend());
+
         /**
          * Poprawne komunikaty:
          * SMS nie może zostać wysłany.
@@ -73,7 +79,7 @@ public class Task02 {
          * Mail nie może zostać wysłany.
          * Mail nie może zostać wysłany.
          * Mail nie może zostać wysłany.
-          */
+         */
         System.out.println(send());
     }
     public static String send() {

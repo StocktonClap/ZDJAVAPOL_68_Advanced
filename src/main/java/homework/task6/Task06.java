@@ -27,5 +27,10 @@ package homework.task6;
 public class Task06 {
     public static void main(String[] args) {
 
+        System.out.println(HumanTemperature.of(36).getHumanTemperature());
+        System.out.println(HumanTemperature.of(36).getKelvin());
+        System.out.println(HumanTemperature.of(36).isNormal());
+        System.out.println(HumanTemperature.of(38).isNormal());
+
     }
 }

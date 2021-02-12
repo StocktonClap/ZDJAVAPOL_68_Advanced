@@ -10,6 +10,13 @@ abstract public class Message {
     abstract public String send();
 
     public boolean canSend() {
-        return !content.isEmpty() && !content.isBlank() && content.length() >= 5;
+        if (this.content == null || this.content == "" || this.content.length() < 5) {
+            return false;
+        }
+            return true;
+        }
+
+    public String getContent() {
+        return content;
     }
 }
