@@ -28,6 +28,25 @@ public class GameBoard {
         return new PlayerMark[]{markOne, markTwo};
     }
 
+     protected static class PlayerMark {
+        private final String name;
+        private final String symbol;
+
+        public PlayerMark(String name, String symbol) {
+            this.name = name;
+            this.symbol = symbol;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        @Override
+        public String toString() {
+            return symbol;
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
