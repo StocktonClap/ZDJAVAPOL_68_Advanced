@@ -13,24 +13,29 @@ import java.util.Objects;
      * Zaimplementuj metodę, która zwróci obiekt EmailAddress, tylko gdy parametr address jest poprawny
      * jeśli nie to zgłosi wyjątek IllegalArgumentException z komunikatem: address + "is not valid email address!"
      */
-    public static EmailAddress of(String address){
-
-        return null;
+    public static EmailAddress of(String address) throws IllegalArgumentException {
+        if(!isValidAddress(address))
+            throw new  IllegalArgumentException(address +" is not valid email address");
+        return new EmailAddress(address);
     }
 
     /**
      * Zaimplementuj metodę, która tworzy obiekt EmailAddress na podstawie loginu i hosta
      * Jeśli nie można zbudowac poprawnego adresu np. gdy w login znajduje się znak '@' lub inny niż alfanumeryczny
      * to zgłosi jeden z dwóch wyjątków:
-     *          - IllegalLoginException, gdy login jest niepoprawnie zbudowany
+     *          - IllegalHostException, gdy login jest niepoprawnie zbudowany
      *          - IllegalHostException, gdy nazwa host nie niepoprawna
      * Jeśli oba argumenty są błędne to zgłaszamy pierwszy wyjątek
      * Obie klasy wyjątków należy samodzielnie zdefiniować
      */
 
-    public static EmailAddress of(String login, String host) {
-
-        return null;
+    public static EmailAddress of(String username, String host) throws IllegalUsernameException, IllegalHostException{
+        if (!isValidUsername(username)) {
+            throw new IllegalUsernameException(username);
+        } else if (!isValidHost(host)) {
+            throw new IllegalHostException(host);
+        }
+        return new EmailAddress(new StringBuilder(username).append("@").append(host).toString());
     }
 
     public String get(){

@@ -1,6 +1,6 @@
 package homework.task11;
 
-public class StringPair {
+public class StringPair implements Parable {
     private final String first;
     private final String second;
 
@@ -9,11 +9,13 @@ public class StringPair {
         this.second = second;
     }
 
-    public String getFirst(){
+    @Override
+    public Object getFirst() {
         return first;
     }
 
-    public String getSecond(){
+    @Override
+    public Object getSecond() {
         return second;
     }
 }

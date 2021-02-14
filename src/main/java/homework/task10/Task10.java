@@ -5,7 +5,7 @@ package homework.task10;
  * EmailAdrres jeśli argumenty są poprawne. W sytuacji błędnych parametrów metody zgłaszają
  * wyjątki:
  *  - metoda of(String address) - IllegalArgumentException
- *  - metoda of(String login, String host) - IllegalLoginException lub IllegalHostException
+ *  - metoda of(String login, String host) - IllegalHostException lub IllegalHostException
  *  Samodzielnie zdefiniuj dwie klasy wyjątków zgłaszanych przez metodę from
  *  Część 2
  *  Zmodyfikuj klasę EmailAddress, aby:
