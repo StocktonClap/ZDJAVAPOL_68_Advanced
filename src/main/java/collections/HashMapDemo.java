@@ -32,7 +32,7 @@ public class HashMapDemo {
         }
         System.out.println("Czy istnieje klucz?");
         System.out.println(emailsStats.containsKey("ola@sda.pl"));
-        System.out.println("CZy istnieje wartość 10?");
+        System.out.println("Czy istnieje wartość 10?");
         System.out.println(emailsStats.containsKey(10));
         System.out.println("Tworzenie kopii:");
         Map<String, Integer> copy = new HashMap<>(emailsStats);

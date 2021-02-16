@@ -1,5 +1,7 @@
 package anonymous;
 
+
+
 public class Menu {
     final MenuItem[] menuItems;
 
